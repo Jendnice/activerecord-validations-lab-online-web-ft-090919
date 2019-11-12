@@ -1,6 +1,8 @@
 class Author < ActiveRecord::Base
   
-  validates :name, presence 
+  validates :name, presence: true 
+  validates :name, uniqueness: true 
+  
   
   validates :registration_number, length: { is: 6 }
   
